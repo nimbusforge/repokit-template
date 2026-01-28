@@ -1,0 +1,10 @@
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Env / tooling
+.env
+.env.*

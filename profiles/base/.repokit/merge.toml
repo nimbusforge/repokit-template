@@ -1,0 +1,4 @@
+[[rule]]
+name = "gitignore"
+strategy = "gitignore"
+patterns = [".gitignore"]

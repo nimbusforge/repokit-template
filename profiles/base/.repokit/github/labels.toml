@@ -1,0 +1,74 @@
+[[label]]
+name = "type:feature"
+color = "1D76DB"
+description = "New functionality"
+
+[[label]]
+name = "type:bug"
+color = "D73A4A"
+description = "Something is broken"
+
+[[label]]
+name = "type:chore"
+color = "CFD3D7"
+description = "Maintenance / chores"
+
+[[label]]
+name = "type:docs"
+color = "0075CA"
+description = "Documentation only"
+
+[[label]]
+name = "type:refactor"
+color = "A2EEEF"
+description = "Refactoring without feature change"
+
+[[label]]
+name = "prio:p0"
+color = "B60205"
+description = "Critical / blocking"
+
+[[label]]
+name = "prio:p1"
+color = "D93F0B"
+description = "Important"
+
+[[label]]
+name = "prio:p2"
+color = "FBCA04"
+description = "Normal priority"
+
+[[label]]
+name = "area:cli"
+color = "0E8A16"
+description = "CLI / tooling"
+
+[[label]]
+name = "area:template"
+color = "5319E7"
+description = "Repo templates / policies"
+
+[[label]]
+name = "area:workflow"
+color = "5319E7"
+description = "Process / PR / issues"
+
+[[label]]
+name = "area:ci"
+color = "0E8A16"
+description = "CI pipelines"
+
+[[label]]
+name = "area:docs"
+color = "0075CA"
+description = "Docs"
+
+[[label]]
+name = "status:blocked"
+color = "000000"
+description = "Blocked on external dependency"
+
+[[label]]
+name = "status:needs-info"
+color = "BFDADC"
+description = "Needs clarification"
