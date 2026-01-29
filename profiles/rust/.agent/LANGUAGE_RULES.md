@@ -6,14 +6,27 @@ These rules extend the general language rules and apply to Rust repositories.
 - All SQL queries must use `sqlx` compile-time checked macros (`query!`, `query_as!`, etc.).
 - Prefer `sqlx::test` for database-backed tests.
 - Avoid dynamic SQL string building; keep queries parameterized and explicit.
+- Do not use SQL stored procedures or SQL enums.
+- Store complex fields as `JSONB` and serialize/deserialize in the persistence adapter when converting to/from `*TableRow` models.
+
+## Persistence & repositories
+- Persistence adapters (SQL, etc.) must follow the repository pattern with a repository trait and separate read/write traits.
+- Each repository defines its own custom error type.
+- Use custom types for `Error` and `BoxFut` for readability.
 
 ## Error handling
 - Prefer custom error types with `thiserror`.
 - Avoid `anyhow` in library code; reserve for binaries where appropriate.
 - IO boundaries must map domain/business errors into standardized user-facing errors.
 
+## Enums & string representations
+- Prefer using enums instead of strings where possible.
+- If a string representation is needed, enums may implement `FromStr` and `AsRef<str>`.
+
 ## Architecture & patterns
 - Prefer Service and Manager patterns with traits to improve testability.
+- No direct mutable repository calls in HTTP handlers; use `*Service` implementations instead.
+- Avoid the `async_trait` polyfill; prefer native async in traits or alternative patterns.
 - Use pure functions in private modules, but avoid across domain boundaries.
 - Keep domain logic independent of transport and persistence concerns.
 
