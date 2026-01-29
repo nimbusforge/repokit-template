@@ -1,12 +1,17 @@
 [[label]]
-name = "type:feature"
+name = "type:story"
 color = "1D76DB"
-description = "New functionality"
+description = "User-facing change or feature"
+
+[[label]]
+name = "type:task"
+color = "0E8A16"
+description = "Implementation task or internal improvement"
 
 [[label]]
 name = "type:bug"
 color = "D73A4A"
-description = "Something is broken"
+description = "Defect or regression"
 
 [[label]]
 name = "type:chore"
@@ -19,49 +24,19 @@ color = "0075CA"
 description = "Documentation only"
 
 [[label]]
-name = "type:refactor"
-color = "A2EEEF"
-description = "Refactoring without feature change"
+name = "type:spike"
+color = "5319E7"
+description = "Time-boxed research to reduce uncertainty"
 
 [[label]]
-name = "prio:p0"
-color = "B60205"
-description = "Critical / blocking"
+name = "status:triage"
+color = "BFDADC"
+description = "Needs triage"
 
 [[label]]
-name = "prio:p1"
-color = "D93F0B"
-description = "Important"
-
-[[label]]
-name = "prio:p2"
+name = "status:in-progress"
 color = "FBCA04"
-description = "Normal priority"
-
-[[label]]
-name = "area:cli"
-color = "0E8A16"
-description = "CLI / tooling"
-
-[[label]]
-name = "area:template"
-color = "5319E7"
-description = "Repo templates / policies"
-
-[[label]]
-name = "area:workflow"
-color = "5319E7"
-description = "Process / PR / issues"
-
-[[label]]
-name = "area:ci"
-color = "0E8A16"
-description = "CI pipelines"
-
-[[label]]
-name = "area:docs"
-color = "0075CA"
-description = "Docs"
+description = "Work in progress"
 
 [[label]]
 name = "status:blocked"
@@ -69,6 +44,96 @@ color = "000000"
 description = "Blocked on external dependency"
 
 [[label]]
-name = "status:needs-info"
-color = "BFDADC"
-description = "Needs clarification"
+name = "status:review"
+color = "C2E0C6"
+description = "In review or awaiting approval"
+
+[[label]]
+name = "status:done"
+color = "0E8A16"
+description = "Completed"
+
+[[label]]
+name = "priority:P0"
+color = "B60205"
+description = "Critical / blocking"
+
+[[label]]
+name = "priority:P1"
+color = "D93F0B"
+description = "High priority"
+
+[[label]]
+name = "priority:P2"
+color = "FBCA04"
+description = "Normal priority"
+
+[[label]]
+name = "priority:P3"
+color = "C5DEF5"
+description = "Low priority"
+
+[[label]]
+name = "area:core"
+color = "1D76DB"
+description = "Core domain or application logic"
+
+[[label]]
+name = "area:api"
+color = "0052CC"
+description = "API layer, handlers, DTOs"
+
+[[label]]
+name = "area:persistence"
+color = "5319E7"
+description = "Database, repositories, migrations"
+
+[[label]]
+name = "area:cli"
+color = "0E8A16"
+description = "CLI tooling"
+
+[[label]]
+name = "area:infra"
+color = "A2EEEF"
+description = "Infrastructure and deployment"
+
+[[label]]
+name = "area:docs"
+color = "0075CA"
+description = "Documentation"
+
+[[label]]
+name = "area:workflow"
+color = "5319E7"
+description = "Process / CI / GitHub workflow"
+
+[[label]]
+name = "risk:low"
+color = "C2E0C6"
+description = "Low risk change"
+
+[[label]]
+name = "risk:medium"
+color = "FBCA04"
+description = "Medium risk change"
+
+[[label]]
+name = "risk:high"
+color = "D73A4A"
+description = "High risk change"
+
+[[label]]
+name = "size:S"
+color = "C2E0C6"
+description = "Small"
+
+[[label]]
+name = "size:M"
+color = "FBCA04"
+description = "Medium"
+
+[[label]]
+name = "size:L"
+color = "D93F0B"
+description = "Large"

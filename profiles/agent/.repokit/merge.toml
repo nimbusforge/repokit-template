@@ -1,0 +1,4 @@
+[[rule]]
+name = "LANGUAGE_RULES.md"
+strategy = "markdownblock"
+patterns = [".agent/LANGUAGE_RULES.md"]

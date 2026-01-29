@@ -1,49 +1,65 @@
-name: Story
-description: User-facing change or feature
-title: "[Story] "
-labels: ["type:story", "status:triage"]
+name: Bug
+description: Defect or regression in behavior
+title: "[Bug] "
+labels: ["type:bug", "status:triage"]
 body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Short description of the bug.
+    validations:
+      required: true
+
   - type: textarea
     id: context
     attributes:
-      label: Context / Problem
-      description: What is broken/missing and why it matters.
+      label: Context / Impact
+      description: Why this matters, who is affected, and severity.
     validations:
       required: true
 
   - type: textarea
-    id: goals
+    id: steps
     attributes:
-      label: Goals
-      description: Bullet list of outcomes.
+      label: Steps to reproduce
+      description: Provide clear steps to reproduce the issue.
       value: |
-        - 
+        1. 
+        2. 
+        3. 
     validations:
       required: true
 
   - type: textarea
-    id: non_goals
+    id: expected
     attributes:
-      label: Non-goals
-      description: Explicitly out of scope.
+      label: Expected behavior
+      description: What should have happened.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happened instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence / Logs
+      description: Logs, screenshots, stack traces, or relevant links.
     validations:
       required: false
 
   - type: textarea
-    id: acceptance
+    id: workaround
     attributes:
-      label: Acceptance criteria
-      description: Concrete checks (Given/When/Then or bullets).
-      value: |
-        - 
-    validations:
-      required: true
-
-  - type: textarea
-    id: approach
-    attributes:
-      label: Proposed approach
-      description: High-level plan or design notes.
+      label: Workaround
+      description: Temporary mitigation, if any.
     validations:
       required: false
 
@@ -94,17 +110,6 @@ body:
       required: true
 
   - type: dropdown
-    id: size
-    attributes:
-      label: Size
-      options:
-        - size:S
-        - size:M
-        - size:L
-    validations:
-      required: false
-
-  - type: dropdown
     id: risk
     attributes:
       label: Risk
@@ -112,6 +117,17 @@ body:
         - risk:low
         - risk:medium
         - risk:high
+    validations:
+      required: false
+
+  - type: dropdown
+    id: size
+    attributes:
+      label: Size
+      options:
+        - size:S
+        - size:M
+        - size:L
     validations:
       required: false
 

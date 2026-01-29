@@ -1,27 +1,55 @@
-# Workflow (GitHub Issues + Conventional Commits)
+# Workflow (GitHub Issues + GitHub Flow)
 
-GitHub Repository used for issues, labels and projects: {{REPOSITORY_NAME}}
+This workflow is intentionally general so it can be reused across repositories.
 
 ## Source of truth
-- Each change maps to exactly one GitHub Issue.
+- Every change maps to exactly one GitHub Issue.
+- The Issue contains current status via labels and/or the Issue form status field.
+- If scope changes, update the Issue (plan + acceptance criteria).
 
-## Branch naming
-- feat/<id>-<slug>
-- fix/<id>-<slug>
-- chore/<id>-<slug>
+## Issue types
+Use the repo’s issue templates:
+- Story: user-facing change or feature.
+- Task: internal work or a unit of delivery.
+- Bug: defect or regression.
+- Docs: documentation updates.
+- Spike: time-boxed research to reduce uncertainty.
 
-## Commit messages
+## Status tracking (labels)
+Exactly one status label should be active at a time:
+- `status:triage` → `status:in-progress` → `status:review` → `status:done`
+- If blocked, use `status:blocked` and comment with the blocker + next step.
+
+## Branching (GitHub Flow)
+- Create a branch from default: `feat/<id>-<slug>`, `fix/<id>-<slug>`, or `chore/<id>-<slug>`.
+- Keep branches small and focused on one Issue.
+
+## Commits
 Format: `type(scope): summary (#<id>)`
 Examples:
-- feat(api): add order endpoint (#123)
-- refactor(domain): split pricing rules (#123)
-- test(core): add unit tests for fee calc (#123)
+- `feat(api): add order endpoint (#123)`
+- `fix(core): handle null price (#123)`
+- `docs(readme): clarify setup steps (#123)`
 
 ## Pull requests
-- Title should also include `(#<id>)`
-- Body MUST include `Fixes #<id>`
-- Include:
-  - Context
-  - Approach
-  - Trade-offs / risks
-  - How to test
+- Title includes `(#<id>)`.
+- Body includes `Fixes #<id>`.
+- Include: Context, Approach, Trade-offs/Risks, How to test.
+- Keep PRs reviewable; split if needed.
+
+## Review & merge
+- Request review when ready; update status to `status:review`.
+- Address feedback; keep commits clean.
+- Merge using the repo’s preferred strategy.
+
+## Completion
+- Ensure Definition of Done is satisfied.
+- Update Issue plan/checklist.
+- Set status to `status:done` and close the Issue.
+- Link the PR in the Issue.
+
+## Escalation
+- If blocked or confidence is low, add `status:blocked` and comment with:
+  - blocker
+  - what’s needed
+  - next action

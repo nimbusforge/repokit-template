@@ -1,13 +1,13 @@
-name: Story
-description: User-facing change or feature
-title: "[Story] "
-labels: ["type:story", "status:triage"]
+name: Docs
+description: Documentation updates, clarifications, or additions
+title: "[Docs] "
+labels: ["type:docs", "status:triage"]
 body:
   - type: textarea
     id: context
     attributes:
       label: Context / Problem
-      description: What is broken/missing and why it matters.
+      description: What documentation is missing, unclear, or outdated.
     validations:
       required: true
 
@@ -38,14 +38,6 @@ body:
         - 
     validations:
       required: true
-
-  - type: textarea
-    id: approach
-    attributes:
-      label: Proposed approach
-      description: High-level plan or design notes.
-    validations:
-      required: false
 
   - type: textarea
     id: dependencies

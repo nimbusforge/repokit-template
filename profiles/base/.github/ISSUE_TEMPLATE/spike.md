@@ -1,39 +1,21 @@
-name: Story
-description: User-facing change or feature
-title: "[Story] "
-labels: ["type:story", "status:triage"]
+name: Spike
+description: Time-boxed research to reduce uncertainty
+title: "[Spike] "
+labels: ["type:spike", "status:triage"]
 body:
   - type: textarea
     id: context
     attributes:
       label: Context / Problem
-      description: What is broken/missing and why it matters.
+      description: What is unknown and why it matters.
     validations:
       required: true
 
   - type: textarea
-    id: goals
+    id: questions
     attributes:
-      label: Goals
-      description: Bullet list of outcomes.
-      value: |
-        - 
-    validations:
-      required: true
-
-  - type: textarea
-    id: non_goals
-    attributes:
-      label: Non-goals
-      description: Explicitly out of scope.
-    validations:
-      required: false
-
-  - type: textarea
-    id: acceptance
-    attributes:
-      label: Acceptance criteria
-      description: Concrete checks (Given/When/Then or bullets).
+      label: Key questions
+      description: List the questions this spike should answer.
       value: |
         - 
     validations:
@@ -43,9 +25,27 @@ body:
     id: approach
     attributes:
       label: Proposed approach
-      description: High-level plan or design notes.
+      description: Outline research methods, sources, or experiments.
     validations:
       required: false
+
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Deliverables
+      description: Expected outputs (notes, recommendations, prototype, doc).
+      value: |
+        - 
+    validations:
+      required: true
+
+  - type: textarea
+    id: timebox
+    attributes:
+      label: Timebox
+      description: Max duration for the spike (e.g., 1–3 days).
+    validations:
+      required: true
 
   - type: textarea
     id: dependencies
