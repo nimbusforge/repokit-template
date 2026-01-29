@@ -29,6 +29,7 @@ These rules extend the general language rules and apply to Rust repositories.
 - Avoid the `async_trait` polyfill; prefer native async in traits or alternative patterns.
 - Use pure functions in private modules, but avoid across domain boundaries.
 - Keep domain logic independent of transport and persistence concerns.
+- `mod.rs` is for documentation and `mod` declarations/visibility only; do not place code, traits, or structs in `mod.rs`.
 
 ## Runtime & composition
 - Use the `processmanager` crate for runnable services.

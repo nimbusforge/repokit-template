@@ -24,6 +24,7 @@ Exactly one status label should be active at a time:
 ## Branching (GitHub Flow)
 - Create a branch from default: `feat/<id>-<slug>`, `fix/<id>-<slug>`, or `chore/<id>-<slug>`.
 - Check out the new branch locally and set the upstream to the remote (push it once so both local and remote branches exist).
+- If you can’t create a local branch (detached HEAD, missing permissions, or no remote access), stop and fix before starting work.
 - Keep branches small and focused on one Issue.
 
 ## Commits
