@@ -18,10 +18,12 @@ Use the repo’s issue templates:
 ## Status tracking (labels)
 Exactly one status label should be active at a time:
 - `status:triage` → `status:in-progress` → `status:review` → `status:done`
+- When you start work, immediately move the Issue to `status:in-progress` (or update the Issue status field).
 - If blocked, use `status:blocked` and comment with the blocker + next step.
 
 ## Branching (GitHub Flow)
 - Create a branch from default: `feat/<id>-<slug>`, `fix/<id>-<slug>`, or `chore/<id>-<slug>`.
+- Check out the new branch locally and set the upstream to the remote (push it once so both local and remote branches exist).
 - Keep branches small and focused on one Issue.
 
 ## Commits
