@@ -1,5 +1,6 @@
 # Workflow (GitHub Issues + GitHub Flow)
 
+GitHub Repository: {{REPOSITORY_NAME}}
 This workflow is intentionally general so it can be reused across repositories.
 
 ## Source of truth
