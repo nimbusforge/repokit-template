@@ -11,6 +11,7 @@ These rules extend the general language rules and apply to Rust repositories.
 
 ## Persistence & repositories
 - Persistence adapters (SQL, etc.) must follow the repository pattern with a repository trait and separate read/write traits.
+- Repositories always return domain models; internally they must use private `*TableRow` models for persistence conversions. `*TableRow` models represent the data as it is saved.
 - Each repository defines its own custom error type.
 - Use custom types for `Error` and `BoxFut` for readability.
 
