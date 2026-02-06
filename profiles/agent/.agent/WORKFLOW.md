@@ -1,4 +1,4 @@
-# Workflow (GitHub Issues + GitHub Flow)
+# Workflow 
 
 GitHub Repository: {{REPOSITORY_NAME}}
 This workflow is intentionally general so it can be reused across repositories.
@@ -30,7 +30,7 @@ Exactly one status label should be active at a time:
 - If you can’t create a local branch (detached HEAD, missing permissions, or no remote access), stop and fix before starting work.
 - Keep branches small and focused on one Issue.
 
-## Usual flow of coding
+## Coding Flow
 1. Load issue/ticket.
 2. Check if the ticket is self-explanatory. If not, ask clarification questions and update the ticket (plan + acceptance criteria).
 3. Run `git fetch origin`, then create a local branch from `main`/`master` (whichever exists).
