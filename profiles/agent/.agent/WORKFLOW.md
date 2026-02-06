@@ -23,10 +23,24 @@ Exactly one status label should be active at a time:
 - If blocked, use `status:blocked` and comment with the blocker + next step.
 
 ## Branching (GitHub Flow)
-- Create a branch from default: `feat/<id>-<slug>`, `fix/<id>-<slug>`, or `chore/<id>-<slug>`.
+- Always run `git fetch origin` before creating any branch.
+- Always create a local branch from the primary branch (`main` or `master`, whichever exists).
+- Create the branch as `feat/<id>-<slug>`, `fix/<id>-<slug>`, or `chore/<id>-<slug>`.
 - Check out the new branch locally and set the upstream to the remote (push it once so both local and remote branches exist).
 - If you can’t create a local branch (detached HEAD, missing permissions, or no remote access), stop and fix before starting work.
 - Keep branches small and focused on one Issue.
+
+## Usual flow of coding
+1. Load issue/ticket.
+2. Check if the ticket is self-explanatory. If not, ask clarification questions and update the ticket (plan + acceptance criteria).
+3. Run `git fetch origin`, then create a local branch from `main`/`master` (whichever exists).
+4. Work in small units; keep working notes, decisions, TODOs, and risks.
+5. Run diagnostics.
+6. Document progress in the ticket (what’s done, what’s next).
+7. Ask to continue if needed due to token limits.
+8. If continuing and not done, go back to step 4.
+9. Check Definition of Done (diagnostics, required tests/linters).
+10. Ask to commit, push, and open a PR (title includes issue ID; body has `Fixes #<id>`).
 
 ## Commits
 Format: `type(scope): summary (#<id>)`
