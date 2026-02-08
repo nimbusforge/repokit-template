@@ -1,5 +1,16 @@
 # Agent Operating Guide
 
+## General agent rules:
+- Apply the base engineering rules in `.agent/BASE.md` for all repos.
+- Apply repo-specific rules only from `.agent/PROJECT.md`.
+- Follow the GitHub Issues + GitHub Flow process in `.agent/WORKFLOW.md`.
+- Treat `.agent/DOD.md` as the Definition of Done and check it before completion.
+- Keep changes minimal, explicit, and reviewable.
+- Maintain clear separation of domain, API (DTO), and persistence models with explicit mapping at boundaries.
+- Avoid hidden coupling; dependencies must be explicit across module boundaries.
+- Do not commit secrets or sensitive data.
+- If blocked or uncertain, update issue status and document the blocker + next step.
+
 ## Read order (mandatory)
 1) `.agent/BASE.md`
 2) `.agent/PROJECT.md`
@@ -27,6 +38,9 @@
 ## Safety
 - Never commit secrets.
 - Do not silently change CI or formatting rules; if needed, explain in the PR.
+- Work on exactly one Issue at a time.
+- Update Issue plan/acceptance criteria if scope changes.
+- When done, summarize what changed, how it was tested, and any trade-offs/risks.
 
 ## Completion rule
 Do not claim completion unless `.agent/DOD.md` is satisfied and you can describe:
