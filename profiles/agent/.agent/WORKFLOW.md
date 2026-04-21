@@ -40,7 +40,9 @@ Exactly one status label should be active at a time:
 7. Ask to continue if needed due to token limits.
 8. If continuing and not done, go back to step 4.
 9. Check Definition of Done (diagnostics, required tests/linters).
-10. Ask to commit, push, and open a PR (title includes issue ID; body has `Fixes #<id>`).
+10. Ask to commit, push, and open a PR.
+    - If the PR fully satisfies the Issue acceptance criteria, use `Fixes #<id>`.
+    - If the PR is partial, use `Part of #<id>` and list remaining scope explicitly.
 
 ## Commits
 Format: `type(scope): summary (#<id>)`
@@ -51,7 +53,9 @@ Examples:
 
 ## Pull requests
 - Title includes `(#<id>)`.
-- Body includes `Fixes #<id>`.
+- Issue linkage in body must match scope:
+  - Full-scope PR (all acceptance criteria done): `Fixes #<id>`.
+  - Partial PR (some criteria still open): `Part of #<id>` (never `Fixes #<id>`).
 - Include: Context, Approach, Trade-offs/Risks, How to test.
 - Keep PRs reviewable; split if needed.
 
