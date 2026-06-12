@@ -7,6 +7,7 @@ This workflow is intentionally general so it can be reused across repositories.
 - Every change maps to exactly one GitHub Issue.
 - The Issue contains current status via labels and/or the Issue form status field.
 - If scope changes, update the Issue (plan + acceptance criteria).
+- Progress notes, refactor rationale, temporary trade-offs, and issue-scoped execution details belong in the Issue or PR, not `.agent/CONTEXT/DECISIONS.md`.
 
 ## Issue types
 Use the repo’s issue templates:
@@ -35,6 +36,7 @@ Exactly one status label should be active at a time:
 2. Check if the ticket is self-explanatory. If not, ask clarification questions and update the ticket (plan + acceptance criteria).
 3. Run `git fetch origin`, then create a local branch from `main`/`master` (whichever exists).
 4. Work in small units; keep working notes, decisions, TODOs, and risks.
+   Record implementation history in the Issue/PR unless it establishes a durable architectural rule that future work must preserve.
 5. Run diagnostics.
 6. Document progress in the ticket (what’s done, what’s next).
 7. Ask to continue if needed due to token limits.

@@ -7,7 +7,8 @@ This checklist is intentionally language‑agnostic. Repos may add language‑sp
 - Implementation is covered by tests (unit/integration as appropriate).
 - Lint/format/typecheck pass for the repo.
 - CI is green (or explicitly justified).
-- Docs/DECISIONS updated when behavior or architecture changes.
+- Docs updated when behavior changes.
+- `.agent/CONTEXT/DECISIONS.md` updated only when the change introduces or revises a durable architectural constraint, boundary rule, runtime policy, or long-lived product/API contract.
 - PR includes clear “How to test” and links the Issue (e.g., `Fixes #<id>`).
 - No secrets or sensitive data were introduced.
 

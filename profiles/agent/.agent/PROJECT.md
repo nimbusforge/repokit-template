@@ -74,6 +74,9 @@ Use this file to tailor the agent to the repo. Keep it short and actionable. Thi
 ## Documentation expectations
 - **Docs that must be updated for changes:**
 - **ADR/decision log location:**
+- **What belongs in the decision log:** stable layer ownership, domain/API/persistence boundary rules, contract versioning rules, and cross-cutting runtime policies.
+- **What does not belong in the decision log:** issue-slice refactors, extracted services, renamed files, file splits, test-module reorganizations, or cleanup passes unless they create a reusable repo-wide rule.
+- **Where implementation history goes:** issue and PR updates by default; use an archive only if the note is worth keeping but not part of the active architectural working set.
 
 ## Language‑specific conventions
 ### Rust
