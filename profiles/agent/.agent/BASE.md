@@ -40,7 +40,8 @@ These rules are intentionally cross‑project. Project‑specific details belong
 - Correlate logs/traces per request/job.
 
 ## Documentation
-- Non‑trivial decisions → add a short entry to `.agent/CONTEXT/DECISIONS.md`.
+- Durable architecture, boundary, runtime-policy, and long-lived product/API contract decisions → add a short entry to `.agent/CONTEXT/DECISIONS.md`.
+- Implementation notes, refactor slices, file moves, test reorganizations, and issue-local choices belong in the Issue/PR or an archive, not the active decisions log.
 - Behavior changes → update docs/README/API docs as appropriate.
 
 ## Code hygiene
